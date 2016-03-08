@@ -57,9 +57,7 @@
             <tag name="form.type" alias="ambta_translationsLocalesSelector" />
         </service>
         <service id="ambta_translation_form.default.type.translatedEntity" class="%ambta_translation_form.default.type.translatedEntity.class%">
-            <call method="setRequest">
-                <argument type="service" id="request" on-invalid="null" strict="false" />
-            </call>
+            <argument type="service" id="request_stack" />
             <tag name="form.type" alias="ambta_translatedEntity" />
         </service>       
     </services>
