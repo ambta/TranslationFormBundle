@@ -25,7 +25,7 @@
         "knplabs/doctrine-behaviors": "1.0.*"
     },
     "suggest": {
-        "ambta/i18n-doctrine-bundle": "For Ambta strategy",
+        "a2lix/i18n-doctrine-bundle": "For A2lix strategy",
         "gedmo/doctrine-extensions": "For Gedmo strategy",
         "knplabs/doctrine-behaviors": "For Knp strategy",
         "prezent/doctrine-translatable-bundle": "For Prezent strategy"
