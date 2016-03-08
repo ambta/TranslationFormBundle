@@ -1,8 +1,8 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Form\Type;
+namespace Ambta\TranslationFormBundle\Form\Type;
 
-use A2lix\TranslationFormBundle\Locale\LocaleProviderInterface,
+use Ambta\TranslationFormBundle\Locale\LocaleProviderInterface,
     Symfony\Component\Form\FormView,
     Symfony\Component\Form\AbstractType,
     Symfony\Component\Form\FormInterface,
@@ -20,7 +20,7 @@ class TranslationsLocalesSelectorType extends AbstractType
 
     /**
      *
-     * @param \A2lix\TranslationFormBundle\Locale\LocaleProviderInterface $localeProvider
+     * @param \Ambta\TranslationFormBundle\Locale\LocaleProviderInterface $localeProvider
      */
     public function __construct(LocaleProviderInterface $localeProvider)
     {
@@ -48,7 +48,7 @@ class TranslationsLocalesSelectorType extends AbstractType
             'expanded' => true,
             'multiple' => true,
             'attr' => array(
-                'class' => "a2lix_translationsLocalesSelector"
+                'class' => "ambta_translationsLocalesSelector"
             )
         ));
     }
@@ -72,6 +72,6 @@ class TranslationsLocalesSelectorType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'a2lix_translationsLocalesSelector';
+        return 'ambta_translationsLocalesSelector';
     }
 }

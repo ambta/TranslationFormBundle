@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace A2lix\TranslationFormBundle\Locale;
+namespace Ambta\TranslationFormBundle\Locale;
 
 /**
  * @author Gonzalo Vilaseca <gvilaseca@reiss.co.uk>
@@ -45,10 +45,10 @@ class DefaultProvider implements LocaleProviderInterface
     {
         if (!in_array($defaultLocale, $locales)) {
             if (count($locales) > 0) {
-                throw new \InvalidArgumentException(sprintf('Default locale `%s` not found within the configured locales `[%s]`. Perhaps you need to add it to your `a2lix_translation_form.locales` bundle configuration?', $defaultLocale, implode(',', $locales)));
+                throw new \InvalidArgumentException(sprintf('Default locale `%s` not found within the configured locales `[%s]`. Perhaps you need to add it to your `ambta_translation_form.locales` bundle configuration?', $defaultLocale, implode(',', $locales)));
             }
 
-            throw new \InvalidArgumentException(sprintf('No locales were configured, but expected at least the default locale `%s`. Perhaps you need to add it to your `a2lix_translation_form.locales` bundle configuration?', $defaultLocale));
+            throw new \InvalidArgumentException(sprintf('No locales were configured, but expected at least the default locale `%s`. Perhaps you need to add it to your `ambta_translation_form.locales` bundle configuration?', $defaultLocale));
         }
 
         if (array_diff($requiredLocales, $locales)) {

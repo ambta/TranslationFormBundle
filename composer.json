@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Translate your doctrine objects easily with some helps",
     "keywords": ["symfony2", "doctrine2", "i18n", "internationalization", "translation", "translatable", "form", "gedmo", "knplabs", "ambta"],
-    "homepage": "https://github.com/a2lix/TranslationFormBundle",
+    "homepage": "https://github.com/ambta/TranslationFormBundle",
     "license": "MIT",
     "authors": [
         {
@@ -25,16 +25,16 @@
         "knplabs/doctrine-behaviors": "1.0.*"
     },
     "suggest": {
-        "a2lix/i18n-doctrine-bundle": "For A2lix strategy",
+        "ambta/i18n-doctrine-bundle": "For Ambta strategy",
         "gedmo/doctrine-extensions": "For Gedmo strategy",
         "knplabs/doctrine-behaviors": "For Knp strategy",
         "prezent/doctrine-translatable-bundle": "For Prezent strategy"
     },
     "autoload": {
-        "psr-0": { "A2lix\\TranslationFormBundle": "" }
+        "psr-0": { "Ambta\\TranslationFormBundle": "" }
     },
     "prefer-stable": true,
-    "target-dir": "A2lix/TranslationFormBundle",
+    "target-dir": "Ambta/TranslationFormBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "2.x-dev"

@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Tests\Gedmo\Fixtures\Entity;
+namespace Ambta\TranslationFormBundle\Tests\Gedmo\Fixtures\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Translatable\Entity\MappedSuperclass\AbstractTranslation;

@@ -1,18 +1,18 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Tests\Gedmo\Form;
+namespace Ambta\TranslationFormBundle\Tests\Gedmo\Form;
 
-use A2lix\TranslationFormBundle\Tests\Gedmo\Fixtures\Entity\Product;
-use A2lix\TranslationFormBundle\Tests\Gedmo\Fixtures\Entity\ProductTranslation;
-use A2lix\TranslationFormBundle\Tests\TranslationsTypeTestCase;
+use Ambta\TranslationFormBundle\Tests\Gedmo\Fixtures\Entity\Product;
+use Ambta\TranslationFormBundle\Tests\Gedmo\Fixtures\Entity\ProductTranslation;
+use Ambta\TranslationFormBundle\Tests\TranslationsTypeTestCase;
 
 class TranslationsTypeTest extends TranslationsTypeTestCase
 {
     protected function getUsedEntityFixtures()
     {
         return array(
-            'A2lix\\TranslationFormBundle\\Tests\\Gedmo\\Fixtures\\Entity\\Product',
-            'A2lix\\TranslationFormBundle\\Tests\\Gedmo\\Fixtures\\Entity\\ProductTranslation',
+            'Ambta\\TranslationFormBundle\\Tests\\Gedmo\\Fixtures\\Entity\\Product',
+            'Ambta\\TranslationFormBundle\\Tests\\Gedmo\\Fixtures\\Entity\\ProductTranslation',
         );
     }
 
@@ -60,7 +60,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
         //
         $form = $this->factory->createBuilder('form', new Product())
             ->add('url')
-            ->add('translations', 'a2lix_translations')
+            ->add('translations', 'ambta_translations')
             ->add('save', 'submit')
             ->getForm();
         $form->submit($formData);
@@ -93,7 +93,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
 
         $form = $this->factory->createBuilder('form', $product)
             ->add('url')
-            ->add('translations', 'a2lix_translations')
+            ->add('translations', 'ambta_translations')
             ->add('save', 'submit')
             ->getForm();
         $form->submit($formData);
@@ -137,7 +137,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
                              ->setDescription('desc fr');
 
         $product = new Product();
-        $product->setUrl('a2lix.fr')
+        $product->setUrl('ambta.fr')
                 ->addTranslation($productTranslationEs)
                 ->addTranslation($productTranslationFr);
 
@@ -146,7 +146,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
         //
         $form = $this->factory->createBuilder('form', new Product())
             ->add('url')
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'ambta_translations', array(
                 'locales' => array('es', 'fr', 'de')
             ))
             ->add('save', 'submit')
@@ -184,7 +184,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
 
         $form = $this->factory->createBuilder('form', $product)
             ->add('url')
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'ambta_translations', array(
                 'locales' => array('es', 'fr', 'de')
             ))
             ->add('save', 'submit')
@@ -242,7 +242,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
         //
         $form = $this->factory->createBuilder('form', new Product())
             ->add('url')
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'ambta_translations', array(
                 'fields' => array(
                     'title' => array(
                         'label' => 'name'
@@ -285,7 +285,7 @@ class TranslationsTypeTest extends TranslationsTypeTestCase
 
         $form = $this->factory->createBuilder('form', $product)
             ->add('url')
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'ambta_translations', array(
                 'fields' => array(
                     'title' => array(
                         'label' => 'name'

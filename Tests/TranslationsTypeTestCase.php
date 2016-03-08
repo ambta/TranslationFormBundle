@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Tests;
+namespace Ambta\TranslationFormBundle\Tests;
 
 use Symfony\Component\Form\Test\TypeTestCase;
 use Symfony\Bridge\Doctrine\Test\DoctrineTestHelper;
@@ -73,9 +73,9 @@ abstract class TranslationsTypeTestCase extends TypeTestCase
         $formExtensions = array(new DoctrineOrmExtension($this->emRegistry));
         $formRegistry = new FormRegistry($formExtensions, $this->getMock('Symfony\Component\Form\ResolvedFormTypeFactory'));
         
-        $translationForm = new \A2lix\TranslationFormBundle\TranslationForm\TranslationForm($formRegistry, $this->emRegistry);
-        $translationsListener = new \A2lix\TranslationFormBundle\Form\EventListener\TranslationsListener($translationForm);
-        $translationsFormsListener = new \A2lix\TranslationFormBundle\Form\EventListener\TranslationsFormsListener();
+        $translationForm = new \Ambta\TranslationFormBundle\TranslationForm\TranslationForm($formRegistry, $this->emRegistry);
+        $translationsListener = new \Ambta\TranslationFormBundle\Form\EventListener\TranslationsListener($translationForm);
+        $translationsFormsListener = new \Ambta\TranslationFormBundle\Form\EventListener\TranslationsFormsListener();
         
         $this->factory = Forms::createFormFactoryBuilder()
             ->addExtensions(
@@ -92,9 +92,9 @@ abstract class TranslationsTypeTestCase extends TypeTestCase
                      ->getMock()
             )
             ->addTypes(array(
-                new \A2lix\TranslationFormBundle\Form\Type\TranslationsType($translationsListener, array('fr','en','de'), 'en'),
-                new \A2lix\TranslationFormBundle\Form\Type\TranslationsFieldsType(),
-                new \A2lix\TranslationFormBundle\Form\Type\TranslationsFormsType($translationForm, $translationsFormsListener, array('fr','en','de'), 'en'),
+                new \Ambta\TranslationFormBundle\Form\Type\TranslationsType($translationsListener, array('fr','en','de'), 'en'),
+                new \Ambta\TranslationFormBundle\Form\Type\TranslationsFieldsType(),
+                new \Ambta\TranslationFormBundle\Form\Type\TranslationsFormsType($translationForm, $translationsFormsListener, array('fr','en','de'), 'en'),
             ))
             ->getFormFactory();
 

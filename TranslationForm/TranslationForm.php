@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\TranslationForm;
+namespace Ambta\TranslationFormBundle\TranslationForm;
 
 use Symfony\Component\Form\FormRegistry,
     Symfony\Component\HttpKernel\Kernel,

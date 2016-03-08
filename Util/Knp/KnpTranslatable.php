@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Util\Knp;
+namespace Ambta\TranslationFormBundle\Util\Knp;
 
 /**
  * Translatable trait.

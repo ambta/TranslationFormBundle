@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Form\Type;
+namespace Ambta\TranslationFormBundle\Form\Type;
 
 use Doctrine\ORM\EntityRepository,
     Symfony\Component\Form\AbstractType,

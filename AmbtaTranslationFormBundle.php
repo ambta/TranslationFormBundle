@@ -1,16 +1,16 @@
 <?php
 
-namespace A2lix\TranslationFormBundle;
+namespace Ambta\TranslationFormBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle,
     Symfony\Component\DependencyInjection\ContainerBuilder,
-    A2lix\TranslationFormBundle\DependencyInjection\Compiler\TemplatingPass,
-    A2lix\TranslationFormBundle\DependencyInjection\Compiler\LocaleProviderPass;
+    Ambta\TranslationFormBundle\DependencyInjection\Compiler\TemplatingPass,
+    Ambta\TranslationFormBundle\DependencyInjection\Compiler\LocaleProviderPass;
 
 /**
  * @author David ALLIX
  */
-class A2lixTranslationFormBundle extends Bundle
+class AmbtaTranslationFormBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

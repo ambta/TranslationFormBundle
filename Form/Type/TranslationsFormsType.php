@@ -1,10 +1,10 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Form\Type;
+namespace Ambta\TranslationFormBundle\Form\Type;
 
-use A2lix\TranslationFormBundle\TranslationForm\TranslationForm,
-    A2lix\TranslationFormBundle\Form\EventListener\TranslationsFormsListener,
-    A2lix\TranslationFormBundle\Locale\LocaleProviderInterface,
+use Ambta\TranslationFormBundle\TranslationForm\TranslationForm,
+    Ambta\TranslationFormBundle\Form\EventListener\TranslationsFormsListener,
+    Ambta\TranslationFormBundle\Locale\LocaleProviderInterface,
     Symfony\Component\Form\FormView,
     Symfony\Component\Form\AbstractType,
     Symfony\Component\Form\FormInterface,
@@ -24,9 +24,9 @@ class TranslationsFormsType extends AbstractType
 
     /**
      *
-     * @param \A2lix\TranslationFormBundle\TranslationForm\TranslationForm              $translationForm
-     * @param \A2lix\TranslationFormBundle\Form\EventListener\TranslationsFormsListener $translationsListener
-     * @param \A2lix\TranslationFormBundle\Locale\LocaleProviderInterface               $localeProvider
+     * @param \Ambta\TranslationFormBundle\TranslationForm\TranslationForm              $translationForm
+     * @param \Ambta\TranslationFormBundle\Form\EventListener\TranslationsFormsListener $translationsListener
+     * @param \Ambta\TranslationFormBundle\Locale\LocaleProviderInterface               $localeProvider
      */
     public function __construct(TranslationForm $translationForm, TranslationsFormsListener $translationsListener,  LocaleProviderInterface $localeProvider)
     {
@@ -99,6 +99,6 @@ class TranslationsFormsType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'a2lix_translationsForms';
+        return 'ambta_translationsForms';
     }
 }

@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace A2lix\TranslationFormBundle\Tests\Locale;
+namespace Ambta\TranslationFormBundle\Tests\Locale;
 
-use A2lix\TranslationFormBundle\Locale\DefaultProvider;
+use Ambta\TranslationFormBundle\Locale\DefaultProvider;
 
 
 /**
@@ -34,7 +34,7 @@ class DefaultProviderTest extends \PHPUnit_Framework_TestCase
 
     public function testDefaultLocaleIsInLocales()
     {
-        $classname = 'A2lix\TranslationFormBundle\Locale\DefaultProvider';
+        $classname = 'Ambta\TranslationFormBundle\Locale\DefaultProvider';
 
         // Get mock, without the constructor being called
         $mock = $this->getMockBuilder($classname)
@@ -54,7 +54,7 @@ class DefaultProviderTest extends \PHPUnit_Framework_TestCase
 
     public function testRequiredLocaleAreInLocales()
     {
-        $classname = 'A2lix\TranslationFormBundle\Locale\DefaultProvider';
+        $classname = 'Ambta\TranslationFormBundle\Locale\DefaultProvider';
 
         // Get mock, without the constructor being called
         $mock = $this->getMockBuilder($classname)

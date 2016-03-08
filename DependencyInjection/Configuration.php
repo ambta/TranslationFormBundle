@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\DependencyInjection;
+namespace Ambta\TranslationFormBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder,
     Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('a2lix_translation_form');
+        $rootNode = $treeBuilder->root('ambta_translation_form');
 
         $rootNode
             ->children()
@@ -39,7 +39,7 @@ class Configuration implements ConfigurationInterface
                     ->prototype('scalar')->end()
                 ->end()
                 ->scalarNode('manager_registry')->defaultValue('doctrine')->end()
-                ->scalarNode('templating')->defaultValue("A2lixTranslationFormBundle::default.html.twig")->end()
+                ->scalarNode('templating')->defaultValue("AmbtaTranslationFormBundle::default.html.twig")->end()
             ->end()
         ;
 

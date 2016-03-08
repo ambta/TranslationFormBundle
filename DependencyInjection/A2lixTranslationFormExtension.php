@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\DependencyInjection;
+namespace Ambta\TranslationFormBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder,
     Symfony\Component\Config\Definition\Processor,
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder,
  * @author David ALLIX
  * @author Gonzalo Vilaseca <gvilaseca@reiss.co.uk>
  */
-class A2lixTranslationFormExtension extends Extension
+class AmbtaTranslationFormExtension extends Extension
 {
     /**
      *
@@ -28,14 +28,14 @@ class A2lixTranslationFormExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
 
-        $container->setParameter('a2lix_translation_form.locale_provider', $config['locale_provider']);
-        $container->setParameter('a2lix_translation_form.locales', $config['locales']);
-        $container->setParameter('a2lix_translation_form.required_locales', $config['required_locales']);
-        $container->setParameter('a2lix_translation_form.default_locale', $config['default_locale'] ?: 
+        $container->setParameter('ambta_translation_form.locale_provider', $config['locale_provider']);
+        $container->setParameter('ambta_translation_form.locales', $config['locales']);
+        $container->setParameter('ambta_translation_form.required_locales', $config['required_locales']);
+        $container->setParameter('ambta_translation_form.default_locale', $config['default_locale'] ?:
             $container->getParameter('kernel.default_locale', 'en'));
 
-        $container->setParameter('a2lix_translation_form.templating', $config['templating']);
+        $container->setParameter('ambta_translation_form.templating', $config['templating']);
 
-        $container->setAlias('a2lix_translation_form.manager_registry', $config['manager_registry']);
+        $container->setAlias('ambta_translation_form.manager_registry', $config['manager_registry']);
     }
 }

@@ -1,20 +1,20 @@
 $(function() {
-    $('ul.a2lix_translationsLocales').on('click', 'a', function(evt) {
+    $('ul.ambta_translationsLocales').on('click', 'a', function(evt) {
         evt.preventDefault();
         $(this).tab('show');
     });
 
-    $('div.a2lix_translationsLocalesSelector').on('change', 'input', function(evt) {
-        var $tabs = $('ul.a2lix_translationsLocales');
+    $('div.ambta_translationsLocalesSelector').on('change', 'input', function(evt) {
+        var $tabs = $('ul.ambta_translationsLocales');
 
-        $('div.a2lix_translationsLocalesSelector').find('input').each(function() {
-            $tabs.find('li:has(a[data-target=".a2lix_translationsFields-' + this.value + '"])').toggle(this.checked);
+        $('div.ambta_translationsLocalesSelector').find('input').each(function() {
+            $tabs.find('li:has(a[data-target=".ambta_translationsFields-' + this.value + '"])').toggle(this.checked);
         });
 
-        $('ul.a2lix_translationsLocales li:visible:first').find('a').tab('show');
+        $('ul.ambta_translationsLocales li:visible:first').find('a').tab('show');
     }).trigger('change');
 
-    // Manage focus on right bootstrap tab when invalid event (A2lixTranslation tab or not, and inner tabs include)
+    // Manage focus on right bootstrap tab when invalid event (AmbtaTranslation tab or not, and inner tabs include)
     $(':input', 'div.tab-content').on('invalid', function(e) {
         var $tabPanes = $(this).parents('div.tab-pane');
 
@@ -33,10 +33,10 @@ $(function() {
                     return true;
                 }
 
-                // Tab target by class for a2lixTranslation
-                var a2lixTranslClass = /a2lix_translationsFields-[\S]+/.exec(this.className);
-                if (a2lixTranslClass.length) {
-                    $tabNavs.find('a[data-target=".'+ a2lixTranslClass[0] +'"]')
+                // Tab target by class for ambtaTranslation
+                var ambtaTranslClass = /ambta_translationsFields-[\S]+/.exec(this.className);
+                if (ambtaTranslClass.length) {
+                    $tabNavs.find('a[data-target=".'+ ambtaTranslClass[0] +'"]')
                             .trigger('click');
 
                     return true;

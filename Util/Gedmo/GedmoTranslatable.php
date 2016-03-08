@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Util\Gedmo;
+namespace Ambta\TranslationFormBundle\Util\Gedmo;
 
 /**
  * Translatable trait.

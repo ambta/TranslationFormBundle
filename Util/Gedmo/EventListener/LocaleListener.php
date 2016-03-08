@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Util\Gedmo\EventListener;
+namespace Ambta\TranslationFormBundle\Util\Gedmo\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface,
     Symfony\Component\HttpKernel\Event\GetResponseEvent,

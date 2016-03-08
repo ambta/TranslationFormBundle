@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace A2lix\TranslationFormBundle\Locale;
+namespace Ambta\TranslationFormBundle\Locale;
 
 /**
  * Provides the locales

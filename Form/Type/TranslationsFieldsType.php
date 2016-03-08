@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Form\Type;
+namespace Ambta\TranslationFormBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType,
     Symfony\Component\Form\FormBuilderInterface,
@@ -53,6 +53,6 @@ class TranslationsFieldsType extends AbstractType
 
     public function getBlockPrefix()
     {
-        return 'a2lix_translationsFields';
+        return 'ambta_translationsFields';
     }
 }

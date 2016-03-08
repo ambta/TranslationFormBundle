@@ -1,9 +1,9 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Form\EventListener;
+namespace Ambta\TranslationFormBundle\Form\EventListener;
 
-use A2lix\TranslationFormBundle\Util\LegacyFormHelper,
-    A2lix\TranslationFormBundle\TranslationForm\TranslationForm,
+use Ambta\TranslationFormBundle\Util\LegacyFormHelper,
+    Ambta\TranslationFormBundle\TranslationForm\TranslationForm,
     Symfony\Component\Form\FormEvent,
     Symfony\Component\Form\FormEvents,
     Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -17,7 +17,7 @@ class TranslationsListener implements EventSubscriberInterface
 
     /**
      *
-     * @param \A2lix\TranslationFormBundle\TranslationForm\TranslationForm $translationForm
+     * @param \Ambta\TranslationFormBundle\TranslationForm\TranslationForm $translationForm
      */
     public function __construct(TranslationForm $translationForm)
     {
@@ -43,7 +43,7 @@ class TranslationsListener implements EventSubscriberInterface
                 if (isset($fieldsOptions[$locale])) {
                     $form->add(
                         $locale,
-                        LegacyFormHelper::getType('A2lix\TranslationFormBundle\Form\Type\TranslationsFieldsType'),
+                        LegacyFormHelper::getType('Ambta\TranslationFormBundle\Form\Type\TranslationsFieldsType'),
                         array(
                             'data_class' => $translationClass,
                             'fields' => $fieldsOptions[$locale],

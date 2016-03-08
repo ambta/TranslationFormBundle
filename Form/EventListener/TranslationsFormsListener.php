@@ -1,6 +1,6 @@
 <?php
 
-namespace A2lix\TranslationFormBundle\Form\EventListener;
+namespace Ambta\TranslationFormBundle\Form\EventListener;
 
 use Symfony\Component\Form\FormEvent,
     Symfony\Component\Form\FormEvents,
